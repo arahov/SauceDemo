@@ -8,7 +8,8 @@ Testing Swag Labs demo website for trainging perposes
 ## Dependencies
 
 1- Make sure python is installed in your system 
-2- nstall Selenium webdrive
+
+2- install Selenium webdrive
 
 ```bash
   pip install selenium
