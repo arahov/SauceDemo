@@ -5,24 +5,26 @@ Testing Swag Labs demo website for trainging perposes
 
 
 
+## Installation Dependencies and Test Execution
+
 ## Dependencies
 
-1- Make sure python is installed in your system 
-2- nstall Selenium webdrive
+- Make sure python is installed in your system 
+- install Selenium webdrive
 
 ```bash
   pip install selenium
 ```
-3- install pytest
+- install pytest
 
 ```bash
   pip install pytest
 ```
-4- install -html report
+- install -html report
 ```bash
  pip install pytest-html
 ```
-5- install allure
+- install allure
 ```bash
 brew install allure
 ```
@@ -38,43 +40,6 @@ pytest --alluredir=allure-results
 to generate allure report html after running your tests
 ```bash
     Allure serve AllureReport
-```
-
-## Installation Dependencies and Test Execution
-
-## Dependencies
-
-1- Make sure python is installed in your system 
-2- nstall Selenium webdrive
-
-```bash
-  pip install selenium
-```
-3- install pytest
-
-```bash
-  pip install pytest
-```
-4- install -html report
-```bash
- pip install pytest-html
-```
-5- install allure
-```bash
-brew install allure
-```
-```bash
-pip install allure-pytest
-```
-
-Run Tests with Allure Reporting Enabled
-```bash
-pytest --alluredir=AllureReport
-```
-
-to generate allure report html after running your tests
-```bash
-Allure serve AllureReport
 ```
 
 ## Running the test 
@@ -184,5 +149,6 @@ pytest tests/test_checkout_overview.py:test_checkout_overview
 - click on finish
 - verify page redirects to Homepage 
 
+- [link to Allure test results](http://192.168.1.2:56540/index.html#suites/bea24d4cde09b2aaf48b8b27f2e0e109/ad7d791b61e08778/)
 
 
