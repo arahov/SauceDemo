@@ -185,5 +185,7 @@ pytest tests/test_checkout_overview.py:test_checkout_overview
 - click on finish
 - verify page redirects to Homepage 
 
+[link to Allure test results][http://192.168.1.2:56540/index.html#suites/bea24d4cde09b2aaf48b8b27f2e0e109/ad7d791b61e08778/]
+
 
 
