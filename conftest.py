@@ -10,10 +10,13 @@ from utilities.test_data import TestData
 def initialize_driver(request):
     if request.param == "chrome":
         driver = webdriver.Chrome()
+        driver.maximize_window()
     elif request.param == "firefox":
         driver = webdriver.Firefox()
+        driver.maximize_window()
     elif request.param == "edge":
         driver = webdriver.Edge()
+        driver.maximize_window()
 
     request.cls.driver = driver  # Attach the driver to the test class instance
     driver.get(TestData.url)  # Navigate to the desired URL
