@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 
 
 class CartPage(BasePage):
+    # locators for cart_page
     checkout_button = (By.ID, "checkout")
     page_title = (By.CLASS_NAME, 'title')
     continue_shopping_button = (By.ID, "continue-shopping")

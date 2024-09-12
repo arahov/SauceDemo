@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
+    # login page locators
     username_field = (By.ID, "user-name")
     password_field = (By.ID, "password")
     login_button = (By.ID, "login-button")

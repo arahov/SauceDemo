@@ -3,6 +3,7 @@ from pages.base_page import BasePage
 
 
 class CheckoutOverviewPage(BasePage):
+    # checkout_overview_page locators
     finish_button = (By.ID,"finish")
     checkout_overview_title_text = (By.CLASS_NAME, "title")
 

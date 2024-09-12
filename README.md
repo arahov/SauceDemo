@@ -79,7 +79,7 @@ pytest tests/test_checkout_overview.py:test_checkout_overview
 - Enter correct credentials and press login button
 - Verify user is directed to inventory (products) page
 - Filter by lower to higher
-- add the lowes 2 items to the cart
+- add the lowest 2 items to the cart
 - Assert number of items are 2 
 - Click on your cart
 - Assert page navigates to your cart page

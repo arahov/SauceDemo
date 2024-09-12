@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 
 
 class InventoryPage(BasePage):
+    # inventory page locators
     sort_lower_price = (By.XPATH, "//div[@class='right_component']//select["
                                   "@class='product_sort_container']//following-sibling::option[2]")
     shop_cart_button = (By.CLASS_NAME, "shopping_cart_badge")

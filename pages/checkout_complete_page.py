@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 
 
 class CheckoutCompletePage(BasePage):
+    # checkout_complete_page locators
     page_title = (By.CLASS_NAME, "title")
     button_back_home = (By.ID, "back-to-products")
 

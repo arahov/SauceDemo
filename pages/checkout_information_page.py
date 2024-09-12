@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 
 
 class CheckoutInformationPage(BasePage):
+    # checkout_information_page locators
     first_name_field = (By.ID, "first-name")
     last_name_field = (By.ID, "last-name")
     postal_code_field = (By.ID, "postal-code")
