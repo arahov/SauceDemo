@@ -1,3 +1,5 @@
+from selenium.common import TimeoutException
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -48,17 +50,12 @@ class BasePage:
 
     # checks if error-button is displayed
     def wait_element_is_displayed(self, locator, timeout=10):
-        """
-        Waits for an element to be present on the page and returns it.
-
-        :param locator: the selector method and locator
-        :param timeout: Maximum time to wait for the element (in seconds)
-        :return: WebElement once it is found and present on the page
-        """
-        element = WebDriverWait(self.driver, timeout).until(
-            EC.visibility_of_element_located(locator)
-        )
-        return element.is_displayed()
+        try:
+            element = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+            return element.is_displayed()
+        except TimeoutException:
+            print(f"Element with locator {locator} was not displayed within {timeout} seconds.")
+            return False
 
     def wait_element_get_text(self, locator, timeout=10):
         """
@@ -72,3 +69,11 @@ class BasePage:
             EC.visibility_of_element_located(locator)
         )
         return element.text
+
+    def drag_and_drop(self, source_element, target_element):
+        try:
+            actions = ActionChains(self.driver)
+            actions.drag_and_drop(source_element, target_element).perform()
+            print("Drag and drop action performed successfully.")
+        except Exception as e:
+            print(f"Error occurred during drag and drop: {str(e)}")

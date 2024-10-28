@@ -1,0 +1,15 @@
+import pytest
+from selenium.webdriver.common.by import By
+
+
+@pytest.mark.usefixtures("initialize_driver")
+class BaseClass:
+    pass
+
+
+class Test_Drivers(BaseClass):
+    def test_multiple_browser(self):
+        self.driver.get("https://www.lambdatest.com/selenium-playground/")
+        header = self.driver.find_element(By.CSS_SELECTOR, "#__next h1").text
+        print("header: ", header)
+        assert header == "Selenium Playground"
